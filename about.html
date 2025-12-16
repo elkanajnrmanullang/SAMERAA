@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - Eye Mask Hidrogel</title>
+    <link href="./css/main.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .full-section {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 p-4 transition-all duration-300 bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-teal-600 hover:text-teal-700">Hydrogel</a>
+            <div class="space-x-8 hidden md:flex">
+                <a href="index.html" class="nav-link text-gray-700 hover:text-teal-600 transition duration-200">Home</a>
+                <a href="about.html" class="nav-link text-teal-600 font-semibold transition duration-200">Produk</a>
+                <a href="content.html"
+                    class="nav-link text-gray-700 hover:text-teal-600 transition duration-200">Kandungan</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+
+        <section id="hidrogel-intro" class="relative bg-teal-100 min-h-[300vh]">
+            <div class="sticky top-0 h-screen flex items-center justify-center w-full">
+                <div id="intro-box"
+                    class="p-12 bg-white rounded-2xl shadow-2xl max-w-4xl opacity-0 transform translate-y-0">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-teal-800 mb-6">Apa Itu Eye Mask Hidrogel?</h1>
+                    <p id="definition"
+                        class="text-xl md:text-2xl text-gray-700 mb-8 transform translate-y-10 opacity-0">
+                        Sediaan perawatan kulit area mata berbentuk gel elastis yang mengandung air dalam jumlah tinggi
+                        dan matriks polimer hidrofilik.
+                    </p>
+                    <p id="function"
+                        class="text-lg md:text-xl text-teal-600 font-semibold transform translate-y-10 opacity-0">
+                        Melekat baik, memberikan sensasi dingin, dan menghantarkan bahan aktif secara optimal ke lapisan
+                        kulit.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="advantages" class="full-section bg-white p-16 flex flex-col justify-center">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-gray-800 mb-16 text-center trigger-slide-in-top">Keunggulan Dibanding
+                    Masker Konvensional</h2>
+
+                <div class="grid md:grid-cols-3 gap-10 text-center">
+
+                    <div id="adv-1" class="p-8 bg-blue-50 rounded-xl shadow-lg transform scale-0 opacity-0">
+                        <div class="text-5xl text-blue-500 mb-4">💧</div>
+                        <h3 class="text-2xl font-bold text-blue-700 mb-3">Daya Hidrasi Tinggi</h3>
+                        <p class="text-gray-600">Mampu menahan air dan mencegah penguapan untuk kelembapan maksimal.</p>
+                    </div>
+
+                    <div id="adv-2" class="p-8 bg-green-50 rounded-xl shadow-lg transform scale-0 opacity-0">
+                        <div class="text-5xl text-green-500 mb-4">⏳</div>
+                        <h3 class="text-2xl font-bold text-green-700 mb-3">Pelepasan Aktif Bertahap</h3>
+                        <p class="text-gray-600">Efektivitas kerja bahan aktif lebih stabil dan dilepaskan secara
+                            perlahan.</p>
+                    </div>
+
+                    <div id="adv-3" class="p-8 bg-purple-50 rounded-xl shadow-lg transform scale-0 opacity-0">
+                        <div class="text-5xl text-purple-500 mb-4">🧘</div>
+                        <h3 class="text-2xl font-bold text-purple-700 mb-3">Nyaman & Pas</h3>
+                        <p class="text-gray-600">Sesuai untuk area kulit tipis, tidak mudah bergeser, nyaman digunakan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="h-64 bg-teal-500 flex items-center justify-center">
+            <a href="content.html"
+                class="px-10 py-4 bg-white text-teal-600 font-bold text-lg rounded-full shadow-2xl hover:bg-teal-50 transition duration-300 transform hover:scale-110 trigger-scale-in nav-link">
+                Lihat Sains Dibaliknya (Kandungan) →
+            </a>
+        </section>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

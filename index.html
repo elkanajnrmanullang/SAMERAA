@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Mask Hidrogel - The Perfect Blend</title>
+    <link href="./css/main.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .full-page {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 p-4 transition-all duration-300 bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-teal-600 hover:text-teal-700">Hydrogel</a>
+            <div class="space-x-8 hidden md:flex">
+                <a href="index.html" class="nav-link text-teal-600 font-semibold transition duration-200">Home</a>
+                <a href="about.html"
+                    class="nav-link text-gray-700 hover:text-teal-600 transition duration-200">Produk</a>
+                <a href="content.html"
+                    class="nav-link text-gray-700 hover:text-teal-600 transition duration-200">Kandungan</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section id="hero" class="full-page flex items-center justify-center relative overflow-hidden bg-teal-100">
+            <div id="bg-layer" class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('assets/images/background.jpg');"></div>
+
+            <div id="product-illustration" class="absolute bottom-10 right-10 w-1/4 h-auto opacity-80"
+                style="transform: translateZ(100px);">
+                <img src="assets/images/pouch_placeholder.jpg" alt="Eye Mask Pouch"
+                    class="w-full h-auto rounded-lg shadow-2xl">
+            </div>
+
+            <div class="relative z-10 text-center p-8 bg-white bg-opacity-80 backdrop-blur-sm rounded-xl shadow-2xl">
+                <h1 class="text-6xl font-extrabold text-teal-800 mb-4 animate-fade-in-up">The Perfect Blend</h1>
+                <p class="text-xl text-gray-700 max-w-lg mx-auto animate-fade-in-up delay-200">
+                    Eye Mask Hidrogel: Mencerahkan dan Melembapkan dengan Ekstrak Semangka & Lidah Buaya.
+                </p>
+                <a href="about.html"
+                    class="mt-8 inline-block px-8 py-3 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-700 transition duration-300 transform hover:scale-105 animate-fade-in-up delay-400 nav-link">
+                    Pelajari Lebih Lanjut
+                </a>
+            </div>
+        </section>
+
+        <section id="summary" class="full-page bg-white p-16 flex flex-col justify-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-10 text-center trigger-fade-in">Apa Itu Eye Mask Hidrogel?
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+                <div class="text-lg text-gray-600 space-y-4 trigger-fade-in delay-200">
+                    <p>Eye mask hidrogel adalah sediaan perawatan kulit area mata berbentuk gel elastis yang mengandung
+                        air dalam jumlah tinggi dan matriks polimer hidrofilik.</p>
+                    <p>Hidrogel mampu melekat dengan baik pada kulit, memberikan sensasi dingin, serta menghantarkan
+                        bahan aktif secara lebih optimal ke lapisan kulit.</p>
+                </div>
+                <div class="bg-teal-50 p-8 rounded-xl shadow-lg space-y-4 trigger-fade-in delay-400">
+                    <h3 class="text-2xl font-semibold text-teal-700">Keunggulan Utama</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>**Daya hidrasi tinggi**, mencegah penguapan air.</li>
+                        <li>**Pelepasan bahan aktif secara bertahap**, efektivitas kerja lebih stabil.</li>
+                        <li>**Nyaman digunakan**, tidak mudah bergeser, dan sesuai untuk area kulit tipis.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="full-page bg-teal-600 flex items-center justify-center p-16">
+            <div class="text-center text-white">
+                <h2 class="text-5xl font-extrabold mb-8 trigger-fade-in">Wajah Lebih Cerah & Segar</h2>
+                <a href="content.html"
+                    class="px-10 py-4 bg-white text-teal-600 font-bold text-lg rounded-full shadow-2xl hover:bg-teal-50 transition duration-300 transform trigger-scale-in nav-link">
+                    Lihat Detail Kandungan →
+                </a>
+            </div>
+        </section>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
