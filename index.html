@@ -4,91 +4,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eye Mask Hidrogel - The Perfect Blend</title>
-    <base href="/SAMERAA/">
-    <link href="./css/main.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <style>
-        body {
-            overflow-x: hidden;
-        }
-
-        .full-page {
-            min-height: 100vh;
-        }
-    </style>
+    <title>SAMERA | Hero Section</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@600&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-50 font-sans">
+<body class="bg-[#F7F3F0]">
+    <!-- HERO -->
+    <section id="hero" class="hero-container relative h-screen w-full flex items-center justify-center">
+        <div id="bg-layer" class="absolute inset-0 z-0"></div>
+        <div class="absolute inset-0 bg-black/10 z-[1]"></div>
 
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 p-4 transition-all duration-300 bg-white shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-teal-600 hover:text-teal-700">Hydrogel</a>
-            <div class="space-x-8 hidden md:flex">
-                <a href="index.html" class="nav-link text-teal-600 font-semibold transition duration-200">Home</a>
-                <a href="about.html"
-                    class="nav-link text-gray-700 hover:text-teal-600 transition duration-200">Produk</a>
-                <a href="content.html"
-                    class="nav-link text-gray-700 hover:text-teal-600 transition duration-200">Kandungan</a>
+        <nav
+            class="absolute top-8 w-full z-50 flex justify-center gap-12 text-white uppercase tracking-[0.15em] text-lg font-['Cormorant_Garamond']">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="content.html">Ingredients</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <h1 id="hero-title"
+            class="relative z-10 font-['Playfair_Display'] text-[22vw] text-white/40 leading-none select-none">
+            SAMERA
+        </h1>
+
+        <div class="hero-wave-wrapper absolute bottom-0 left-0 w-full z-[100]">
+            <div class="relative w-full">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" class="w-full h-auto block">
+                    <path fill="#D9C5B2"
+                        d="M0,128L80,117.3C160,107,320,85,480,90.7C640,96,800,128,960,122.7C1120,117,1280,75,1360,53.3L1440,32L1440,160L1360,160C1280,160,1120,160,960,160C800,160,640,160,480,160C320,160,160,160,80,160L0,160Z">
+                    </path>
+                </svg>
+
+                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-[110]">
+                    <div id="logo-badge"
+                        class="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-2xl overflow-hidden bg-white border-4 border-[#D9C5B2]">
+                        <img src="assets/images/logo_samera_noBG.png" alt="SAMERA Logo"
+                            class="w-full h-full object-cover">
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-    <main>
-        <section id="hero" class="full-page flex items-center justify-center relative overflow-hidden bg-teal-100">
-            <div id="bg-layer" class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('assets/images/background.jpg');"></div>
+    </section>
 
-            <div id="product-illustration" class="absolute bottom-10 right-10 w-1/4 h-auto opacity-80"
-                style="transform: translateZ(100px);">
-                <img src="assets/images/pouch_placeholder.jpg" alt="Eye Mask Pouch"
-                    class="w-full h-auto rounded-lg shadow-2xl">
+    <!-- ABOUT -->
+    <section id="about" class="relative bg-[#D9C5B2] pt-16 overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between pb-24">
+
+                <div class="w-full lg:w-[55%] z-30 reveal pr-0 lg:pr-8">
+                    <h2 class="text-6xl md:text-7xl font-['Playfair_Display'] italic mb-8 text-[#4A3F35]">ABOUT</h2>
+                    <div
+                        class="space-y-6 font-['Cormorant_Garamond'] text-[#4A3F35] text-xl md:text-2xl leading-relaxed">
+                        <p class="text-justify">Eye Mask Hidrogel bukan sekadar masker biasa, melainkan <span
+                                class="font-bold">Aplikasi Teknik Biomedis</span> nyata pada perawatan kulit mata.
+                            Produk ini dirancang sebagai <span class="font-bold">Sistem Biomaterial Canggih</span>, di
+                            mana Matriks Polimer Hidrogel berfungsi sebagai media penghantar yang menjamin <span
+                                class="font-bold">Pelepasan Zat Aktif Terkendali</span> untuk penyerapan maksimal ke
+                            jaringan target.</p>
+                        <p class="text-justify">Kami memadukan teknologi ini dengan <span class="font-bold">Bioactive
+                                Agent</span> alami: Ekstrak Semangka yang kaya Likopen dan Vitamin C untuk Modulasi
+                            Melanin dan perlindungan antioksidan, serta Lidah Buaya dengan Acemannan yang berfungsi
+                            sebagai <span class="font-bold">Biomodulator Hidrasi</span> untuk memperkuat Skin Barrier
+                            Anda.</p>
+                        <p class="font-bold italic text-2xl mt-4 mb-4">Efektivitas biologis tinggi, aman untuk jaringan
+                            sensitif, dan hidrasi yang terbukti secara sains.
+                            <br>
+                            <a href="about.html"
+                                class="inline-block text-[#4A3F35] font-['Cormorant_Garamond'] text-xl font-bold italic border-b-2 border-[#4A3F35] pb-1 hover:opacity-70 transition-all tracking-widest cursor-pointer">
+                                - More About Our Product -
+                            </a>
+                        </p>
+                    </div>
+                    <div class="mt-12 relative z-50">
+                        <a href="about.html"
+                            class="inline-block text-[#4A3F35] font-['Cormorant_Garamond'] text-xl font-bold italic border-b-2 border-[#4A3F35] pb-1 hover:opacity-70 transition-all tracking-widest cursor-pointer">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-[45%] relative mt-16 lg:mt-0 flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-md lg:-ml-24">
+                        <div
+                            class="relative z-10 w-[280px] h-[420px] md:w-[340px] md:h-[480px] overflow-hidden rounded-t-full border-2 border-[#4A3F35]/20 p-2 mx-auto lg:ml-auto">
+                            <img src="assets/images/model_about.jpg" alt="Model"
+                                class="w-full h-full object-cover rounded-t-full">
+                        </div>
+                        <div
+                            class="floating-slow absolute -bottom-8 -left-8 md:-left-12 z-30 w-44 h-44 md:w-56 md:h-56 rounded-full shadow-2xl overflow-hidden">
+                            <img src="assets/images/samera_studioProduct.png" alt="Product"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div
+                            class="floating-fast absolute bottom-12 right-0 md:-right-8 z-20 w-36 h-36 md:w-48 md:h-48 rounded-full shadow-2xl overflow-hidden">
+                            <img src="assets/images/samera_studio.png" alt="Studio" class="w-full h-full object-cover">
+                        </div>
+                        <div
+                            class="floating-slow absolute top-12 -right-4 md:-right-6 z-0 w-32 h-32 md:w-44 md:h-44 rounded-full shadow-xl overflow-hidden opacity-80">
+                            <img src="assets/images/productSamera.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full z-30 leading-[0]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" class="w-full h-auto block">
+                <path fill="#A38A73"
+                    d="M0,128L80,117.3C160,107,320,85,480,90.7C640,96,800,128,960,122.7C1120,117,1280,75,1360,53.3L1440,32L1440,160L1360,160C1280,160,1120,160,960,160C800,160,640,160,480,160C320,160,160,160,80,160L0,160Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- EYEMASK -->
+    <section id="eyemask-orbit"
+        class="relative bg-[#A38A73] pt-24 pb-20 px-6 overflow-hidden flex flex-col items-center">
+
+        <h2 class="text-4xl md:text-5xl font-['Playfair_Display'] italic text-[#4A3F35] mb-20 tracking-widest reveal">
+            LET'S SEE OUR EYEMASK
+        </h2>
+
+        <div class="relative w-full max-w-5xl h-[650px] flex items-center justify-center">
+
+            <div
+                class="relative z-10 w-64 h-64 md:w-96 md:h-96 rounded-[40%] overflow-hidden shadow-2xl border-4 border-[#F7F3F0]/20">
+                <img src="assets/images/samera_studio.png" alt="Center Product" class="w-full h-full object-cover">
             </div>
 
-            <div class="relative z-10 text-center p-8 bg-white bg-opacity-80 backdrop-blur-sm rounded-xl shadow-2xl">
-                <h1 class="text-6xl font-extrabold text-teal-800 mb-4 animate-fade-in-up">The Perfect Blend</h1>
-                <p class="text-xl text-gray-700 max-w-lg mx-auto animate-fade-in-up delay-200">
-                    Eye Mask Hidrogel: Mencerahkan dan Melembapkan dengan Ekstrak Semangka & Lidah Buaya.
-                </p>
-                <a href="about.html"
-                    class="mt-8 inline-block px-8 py-3 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-700 transition duration-300 transform hover:scale-105 animate-fade-in-up delay-400 nav-link">
-                    Pelajari Lebih Lanjut
-                </a>
+            <div id="orbit-wrapper" class="absolute inset-0 w-full h-full">
+                <div class="orbit-item absolute flex flex-col items-center text-center w-56">
+                    <img src="assets/images/product_noBG.png" class="w-20 h-20 object-contain mb-3 drop-shadow-lg"
+                        alt="Vit C">
+                    <h3 class="font-['Playfair_Display'] font-bold text-[#F7F3F0] text-xl">Vitamin C</h3>
+                    <p class="font-['Cormorant_Garamond'] text-[#F7F3F0] text-base leading-tight">Ekstrak Kulit Semangka
+                        & Lidah Buaya yang mencerahkan dan meregulasi melanin.</p>
+                </div>
+                <div class="orbit-item absolute flex flex-col items-center text-center w-56">
+                    <img src="assets/images/vitE_fix.png" class="w-24 h-24 object-contain mb-3 drop-shadow-lg"
+                        alt="Vit E">
+                    <h3 class="font-['Playfair_Display'] font-bold text-[#F7F3F0] text-xl">Vitamin E</h3>
+                    <p class="font-['Cormorant_Garamond'] text-[#F7F3F0] text-base leading-tight">Nutrisi Jaringan dan
+                        menjaga elastisitas kulit.</p>
+                </div>
+                <div class="orbit-item absolute flex flex-col items-center text-center w-56">
+                    <img src="assets/images/sliced_watermelon.png" class="w-24 h-24 object-contain mb-3 drop-shadow-lg"
+                        alt="Semangka">
+                    <h3 class="font-['Playfair_Display'] font-bold text-[#F7F3F0] text-xl">Kulit Semangka</h3>
+                    <p class="font-['Cormorant_Garamond'] text-[#F7F3F0] text-base leading-tight">Perisai Antioksidan
+                        kuat (Menebas ROS).</p>
+                </div>
+                <div class="orbit-item absolute flex flex-col items-center text-center w-56">
+                    <img src="assets/images/aloe.png" class="w-24 h-24 object-contain mb-3 drop-shadow-lg" alt="Aloe">
+                    <h3 class="font-['Playfair_Display'] font-bold text-[#F7F3F0] text-xl">Lidah Buaya</h3>
+                    <p class="font-['Cormorant_Garamond'] text-[#F7F3F0] text-base leading-tight">Menguatkan Skin
+                        Barrier & mengunci hidrasi.</p>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <section id="summary" class="full-page bg-white p-16 flex flex-col justify-center">
-            <h2 class="text-4xl font-bold text-gray-800 mb-10 text-center trigger-fade-in">Apa Itu Eye Mask Hidrogel?
+        <div class="mt-16 z-20">
+            <a href="content.html"
+                class="text-[#F7F3F0] font-['Cormorant_Garamond'] text-xl font-bold italic border-b-2 border-[#F7F3F0] pb-1 hover:opacity-70 transition-all tracking-widest">
+                - Let's See More -
+            </a>
+        </div>
+    </section>
+
+    <!-- Pameran -->
+    <section id="exhibition" class="relative bg-[#4A2C18] py-24 px-6 overflow-hidden">
+        <div class="container mx-auto max-w-7xl">
+            <h2
+                class="text-4xl md:text-5xl font-['Playfair_Display'] italic text-[#D9C5B2] mb-20 text-center tracking-widest reveal">
+                OUR JOURNEY
             </h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-                <div class="text-lg text-gray-600 space-y-4 trigger-fade-in delay-200">
-                    <p>Eye mask hidrogel adalah sediaan perawatan kulit area mata berbentuk gel elastis yang mengandung
-                        air dalam jumlah tinggi dan matriks polimer hidrofilik.</p>
-                    <p>Hidrogel mampu melekat dengan baik pada kulit, memberikan sensasi dingin, serta menghantarkan
-                        bahan aktif secara lebih optimal ke lapisan kulit.</p>
-                </div>
-                <div class="bg-teal-50 p-8 rounded-xl shadow-lg space-y-4 trigger-fade-in delay-400">
-                    <h3 class="text-2xl font-semibold text-teal-700">Keunggulan Utama</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>**Daya hidrasi tinggi**, mencegah penguapan air.</li>
-                        <li>**Pelepasan bahan aktif secara bertahap**, efektivitas kerja lebih stabil.</li>
-                        <li>**Nyaman digunakan**, tidak mudah bergeser, dan sesuai untuk area kulit tipis.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
-        <section id="cta" class="full-page bg-teal-600 flex items-center justify-center p-16">
-            <div class="text-center text-white">
-                <h2 class="text-5xl font-extrabold mb-8 trigger-fade-in">Wajah Lebih Cerah & Segar</h2>
-                <a href="content.html"
-                    class="px-10 py-4 bg-white text-teal-600 font-bold text-lg rounded-full shadow-2xl hover:bg-teal-50 transition duration-300 transform trigger-scale-in nav-link">
-                    Lihat Detail Kandungan →
-                </a>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+
+                <div class="md:col-span-8 reveal">
+                    <div
+                        class="h-full overflow-hidden rounded-2xl border-2 border-[#D9C5B2]/20 shadow-2xl group bg-[#3A2213]">
+                        <img src="assets/images/pameran1.jpeg" alt="Exhibition Day 1"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                </div>
+
+                <div class="md:col-span-4 flex flex-col gap-6">
+
+                    <div class="h-full reveal delay-200">
+                        <div
+                            class="overflow-hidden rounded-2xl border-2 border-[#D9C5B2]/20 shadow-xl group bg-[#3A2213]">
+                            <img src="assets/images/pameran2.jpeg" alt="Exhibition Day 2"
+                                class="w-full h-[280px] object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                    </div>
+
+                    <div class="h-full reveal delay-400">
+                        <div
+                            class="overflow-hidden rounded-2xl border-2 border-[#D9C5B2]/20 shadow-xl group bg-[#3A2213]">
+                            <img src="assets/images/pameran3.jpeg" alt="Product Detail"
+                                class="w-full h-[280px] object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </section>
-    </main>
-    <script src="./js/main.js"></script>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#4A2C18] pt-12 pb-20 px-6 flex flex-col items-center text-center">
+        <div class="mb-8">
+            <h2 class="text-[#D9C5B2] text-5xl font-['Playfair_Display'] tracking-[0.2em] font-bold">SAMERA</h2>
+        </div>
+        <div class="space-y-2 text-[#D9C5B2] font-['Cormorant_Garamond']">
+            <p class="text-lg opacity-80">© 2025 SAMERA Project. All Copyright Reserved.</p>
+            <p class="text-sm italic opacity-60">Engineering Skin Health through Biomedical Innovation.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

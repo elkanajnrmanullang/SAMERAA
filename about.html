@@ -4,95 +4,394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Produk - Eye Mask Hidrogel</title>
-    <base href="/SAMERAA/">
-    <link href="./css/main.css" rel="stylesheet">
+    <title>About Us - Inovasi Biomedis SAMERA</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
     <style>
+        /* PALET WARNA COKELAT CHINOS & ESTETIKA PREMIUM */
+        :root {
+            --chinos-brown: #A38A73;
+            --light-chinos: #D9C5B2;
+            --cream-bg: #F7F3F0;
+            --dark-espresso: #4A3F35;
+            --accent-teal: #73A39C;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream-bg);
+            color: var(--dark-espresso);
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
-        .full-section {
-            min-height: 100vh;
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* CUSTOM NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(247, 243, 240, 0.9);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--light-chinos);
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark-espresso);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        nav .nav-links a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: var(--dark-espresso);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav .nav-links a:hover {
+            color: var(--chinos-brown);
+        }
+
+        /* HERO CREATIVE SECTION */
+        .hero-split {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            padding: 0 10%;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--dark-espresso);
+        }
+
+        .hero-text h1 span {
+            color: var(--chinos-brown);
+            font-style: italic;
+        }
+
+        .hero-image-container {
+            flex: 1;
+            position: relative;
+            height: 70vh;
+            background: var(--light-chinos);
+            border-radius: 300px 300px 0 0;
+            overflow: hidden;
+            opacity: 0;
+            transform: scale(0.9);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            mix-blend-mode: multiply;
+            filter: grayscale(0.2);
+        }
+
+        /* BIOMEDICAL SCIENCE SECTION */
+        .science-section {
+            padding: 100px 10%;
+            background: var(--white);
+        }
+
+        .science-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .science-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--chinos-brown);
+        }
+
+        .biomed-card {
+            background: var(--cream-bg);
+            padding: 40px;
+            border-left: 5px solid var(--chinos-brown);
+            margin-bottom: 30px;
+            border-radius: 0 20px 20px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .biomed-card:hover {
+            transform: translateX(10px);
+        }
+
+        /* INGREDIENTS SYNERGY */
+        .synergy-section {
+            padding: 100px 10%;
+            text-align: center;
+        }
+
+        .synergy-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .synergy-card {
+            background: var(--white);
+            width: 300px;
+            padding: 50px 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(74, 63, 53, 0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--light-chinos);
+        }
+
+        .synergy-card:hover {
+            transform: translateY(-15px);
+            background: var(--chinos-brown);
+            color: var(--white);
+        }
+
+        .synergy-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+            font-style: normal;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark-espresso);
+            color: var(--light-chinos);
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+            letter-spacing: 4px;
+        }
+
+        /* ANIMATION UTILITIES */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @media (max-width: 968px) {
+
+            .hero-split,
+            .science-grid {
+                flex-direction: column;
+                grid-template-columns: 1fr;
+                height: auto;
+                padding-top: 120px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-image-container {
+                width: 100%;
+                height: 400px;
+            }
+
+            .hero-split {
+                height: auto;
+                padding-bottom: 50px;
+            }
         }
     </style>
 </head>
 
-<body class="bg-gray-50 font-sans">
+<body>
 
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 p-4 transition-all duration-300 bg-white shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-teal-600 hover:text-teal-700">Hydrogel</a>
-            <div class="space-x-8 hidden md:flex">
-                <a href="index.html" class="nav-link text-gray-700 hover:text-teal-600 transition duration-200">Home</a>
-                <a href="about.html" class="nav-link text-teal-600 font-semibold transition duration-200">Produk</a>
-                <a href="content.html"
-                    class="nav-link text-gray-700 hover:text-teal-600 transition duration-200">Kandungan</a>
-            </div>
+    <nav>
+        <a href="index.html" class="logo">SAMERA</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="content.html">Ingredients</a>
+            <a href="contact.html">Contact</a>
         </div>
     </nav>
 
-    <main class="pt-20">
-
-        <section id="hidrogel-intro" class="relative bg-teal-100 min-h-[300vh]">
-            <div class="sticky top-0 h-screen flex items-center justify-center w-full">
-                <div id="intro-box"
-                    class="p-12 bg-white rounded-2xl shadow-2xl max-w-4xl opacity-0 transform translate-y-0">
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-teal-800 mb-6">Apa Itu Eye Mask Hidrogel?</h1>
-                    <p id="definition"
-                        class="text-xl md:text-2xl text-gray-700 mb-8 transform translate-y-10 opacity-0">
-                        Sediaan perawatan kulit area mata berbentuk gel elastis yang mengandung air dalam jumlah tinggi
-                        dan matriks polimer hidrofilik.
-                    </p>
-                    <p id="function"
-                        class="text-lg md:text-xl text-teal-600 font-semibold transform translate-y-10 opacity-0">
-                        Melekat baik, memberikan sensasi dingin, dan menghantarkan bahan aktif secara optimal ke lapisan
-                        kulit.
-                    </p>
-                </div>
+    <main>
+        <section class="hero-split">
+            <div class="hero-text" id="heroText">
+                <h1>Bridging <span>Science</span> & Aesthetic.</h1>
+                <p>Eye Mask Hidrogel dalam perspektif <strong>Teknik Biomedis</strong>: Lebih dari sekadar kosmetik, ini
+                    adalah aplikasi rekayasa biomaterial untuk kesehatan kulit periokular Anda.</p>
+            </div>
+            <div class="hero-image-container" id="heroImg">
+                <img src="assets/images/modelSamera_smile.png" alt="SAMERA Biomedical View">
             </div>
         </section>
 
-        <section id="advantages" class="full-section bg-white p-16 flex flex-col justify-center">
-            <div class="container mx-auto">
-                <h2 class="text-4xl font-bold text-gray-800 mb-16 text-center trigger-slide-in-top">Keunggulan Dibanding
-                    Masker Konvensional</h2>
+        <section class="science-section">
+            <div class="science-grid">
+                <div class="science-content reveal">
+                    <h2>Sistem Penghantaran Terkontrol</h2>
+                    <p>Dalam Teknik Biomedis, hidrogel kami diklasifikasikan sebagai <strong>biomaterial polimerik
+                            hidrofilik</strong>. Kami menerapkan prinsip <em>drug delivery system</em> medis untuk
+                        menghantarkan senyawa bioaktif ke jaringan kulit target melalui mekanisme difusi terkontrol.</p>
 
-                <div class="grid md:grid-cols-3 gap-10 text-center">
-
-                    <div id="adv-1" class="p-8 bg-blue-50 rounded-xl shadow-lg transform scale-0 opacity-0">
-                        <div class="text-5xl text-blue-500 mb-4">💧</div>
-                        <h3 class="text-2xl font-bold text-blue-700 mb-3">Daya Hidrasi Tinggi</h3>
-                        <p class="text-gray-600">Mampu menahan air dan mencegah penguapan untuk kelembapan maksimal.</p>
+                    <div class="biomed-card" style="margin-top: 30px;">
+                        <h3>Sustained Release</h3>
+                        <p>Matriks polimer berperan sebagai pengontrol laju pelepasan zat aktif secara bertahap,
+                            memastikan efektivitas kerja nutrisi yang lebih stabil dan berkelanjutan.</p>
                     </div>
+                </div>
 
-                    <div id="adv-2" class="p-8 bg-green-50 rounded-xl shadow-lg transform scale-0 opacity-0">
-                        <div class="text-5xl text-green-500 mb-4">⏳</div>
-                        <h3 class="text-2xl font-bold text-green-700 mb-3">Pelepasan Aktif Bertahap</h3>
-                        <p class="text-gray-600">Efektivitas kerja bahan aktif lebih stabil dan dilepaskan secara
-                            perlahan.</p>
+                <div class="science-content reveal" style="padding-top: 50px;">
+                    <div class="biomed-card">
+                        <h3>Interaksi Material-Jaringan</h3>
+                        <p>Pemilihan polimer hidrofilik (seperti Alginat atau Karbomer) menjamin kompatibilitas tinggi
+                            dengan jaringan biologis kulit sensitif tanpa risiko iritasi sistemik.</p>
                     </div>
-
-                    <div id="adv-3" class="p-8 bg-purple-50 rounded-xl shadow-lg transform scale-0 opacity-0">
-                        <div class="text-5xl text-purple-500 mb-4">🧘</div>
-                        <h3 class="text-2xl font-bold text-purple-700 mb-3">Nyaman & Pas</h3>
-                        <p class="text-gray-600">Sesuai untuk area kulit tipis, tidak mudah bergeser, nyaman digunakan.
-                        </p>
+                    <div class="biomed-card">
+                        <h3>Transport Massa</h3>
+                        <p>Air berperan sebagai medium difusi yang memfasilitasi transport molekul aktif dari struktur
+                            3D hidrogel menuju epidermis secara localized.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="h-64 bg-teal-500 flex items-center justify-center">
-            <a href="content.html"
-                class="px-10 py-4 bg-white text-teal-600 font-bold text-lg rounded-full shadow-2xl hover:bg-teal-50 transition duration-300 transform hover:scale-110 trigger-scale-in nav-link">
-                Lihat Sains Dibaliknya (Kandungan) →
-            </a>
+        <section class="synergy-section">
+            <h2 class="reveal" style="font-size: 2.5rem; color: var(--dark-espresso);">Sinergi Rekayasa Sistem</h2>
+            <p class="reveal">Integrasi harmonis antara biomaterial dan agen biologis.</p>
+
+            <div class="synergy-container">
+                <div class="synergy-card reveal">
+                    <i>🧪</i>
+                    <h3>Hidrogel</h3>
+                    <p style="font-size: 0.8rem; text-transform: uppercase; margin-bottom: 15px; font-weight: 600;">
+                        Biomaterial Carrier</p>
+                    <p>Sebagai fondasi utama yang mengatur kontrol pelepasan nutrisi ke target jaringan.</p>
+                </div>
+
+                <div class="synergy-card reveal">
+                    <i>🍉</i>
+                    <h3>Kulit Semangka</h3>
+                    <p style="font-size: 0.8rem; text-transform: uppercase; margin-bottom: 15px; font-weight: 600;">
+                        Bioactive Agent</p>
+                    <p>Modulasi jalur biokimia seluler melalui Likopen dan Vitamin C untuk mencerahkan tanpa merusak
+                        jaringan.</p>
+                </div>
+
+                <div class="synergy-card reveal">
+                    <i>🌿</i>
+                    <h3>Lidah Buaya</h3>
+                    <p style="font-size: 0.8rem; text-transform: uppercase; margin-bottom: 15px; font-weight: 600;">
+                        Natural Biomodulator</p>
+                    <p>Memperkuat fungsi <em>skin barrier</em> epidermis melalui Polisakarida (Acemannan) dan Cellular
+                        Repair.</p>
+                </div>
+            </div>
         </section>
     </main>
-    <script src="./js/main.js"></script>
+
+    <footer class="bg-[#4A2C18] pt-12 pb-20 px-6 flex flex-col items-center text-center">
+        <div class="mb-8">
+            <h2 class="text-[#D9C5B2] text-5xl font-['Playfair_Display'] tracking-[0.2em] font-bold">SAMERA</h2>
+        </div>
+        <div class="space-y-2 text-[#D9C5B2] font-['Cormorant_Garamond']">
+            <p class="text-lg opacity-80">© 2025 SAMERA Project. All Copyright Reserved.</p>
+            <p class="text-sm italic opacity-60">Engineering Skin Health through Biomedical Innovation.</p>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        window.addEventListener('load', () => {
+            const tl = gsap.timeline();
+
+            tl.to("#heroText", {
+                opacity: 1,
+                x: 0,
+                duration: 1.2,
+                ease: "power4.out"
+            })
+                .to("#heroImg", {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1.5,
+                    ease: "power2.out"
+                }, "-=0.8");
+
+            gsap.utils.toArray('.reveal').forEach((el) => {
+                gsap.to(el, {
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    },
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: "power2.out"
+                });
+            });
+
+            gsap.to("#heroImg img", {
+                scrollTrigger: {
+                    trigger: ".hero-split",
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true
+                },
+                y: 100,
+                ease: "none"
+            });
+        });
+    </script>
 </body>
 
 </html>

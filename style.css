@@ -1,0 +1,142 @@
+/* =========================================
+   GLOBAL STYLES 
+   ========================================= */
+:root {
+  --chinos-brown: #a38a73;
+  --cream-bg: #d9c5b2;
+  --light-cream: #f7f3f0;
+  --dark-espresso: #4a3f35;
+  --white: #ffffff;
+  --footer-bg: #4a2c18;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  background-color: var(--cream-bg);
+  color: var(--dark-espresso);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.logo-text {
+  font-family: "Playfair Display", serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid var(--light-chinos);
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+/* Scroll Reveal Base */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Global Footer */
+footer {
+  width: 100%;
+  background-color: var(--footer-bg); /* Menggunakan #4a2c18 */
+  color: var(--light-chinos); /* Menggunakan #D9C5B2 */
+  padding: 60px 10%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+footer h2 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.2em;
+}
+
+footer p {
+  font-family: "Cormorant Garamond", serif;
+}
+/* =========================================
+   HOMEPAGE SPECIFIC (index.html)
+   ========================================= */
+/* Navigasi khusus beranda (transparan di atas hero) */
+#hero nav {
+  position: absolute;
+  top: 2rem;
+  width: 100%;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+#hero nav a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#hero nav a:hover {
+  color: var(--white);
+}
+
+#bg-layer {
+  background-image: url("assets/images/modelSamera.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.orbit-item {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.floating-slow {
+  animation: floatEffect 6s ease-in-out infinite;
+}
+.floating-fast {
+  animation: floatEffect 4.5s ease-in-out infinite;
+}
+
+@keyframes floatEffect {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
