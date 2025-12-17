@@ -27,14 +27,3 @@ Situs ini dibangun dengan performa tinggi sebagai prioritas utama:
 * **Ikonografi**: Library Font Awesome untuk elemen visual profesional pada halaman kontak.
 
 ---
-
-## Struktur Proyek
-```text
-├── assets/
-│   ├── images/         # Aset foto produk dan dokumentasi pameran
-├── index.html          # Beranda Utama (Orbit & Journey)
-├── about.html          # Detail Sains Biomedis SAMERA
-├── content.html        # Informasi Bahan Aktif & Panduan Penggunaan
-├── contact.html        # Formulir Komunikasi & Layanan Pelanggan
-├── style.css           # Global & Page Specific Styling
-└── main.js             # Core Logic & Animasi GSAP
